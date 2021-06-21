@@ -27,8 +27,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        $title = "Input User";
-        return view('admin.userinput', compact('title'));
+        
     }
 
     /**
@@ -39,20 +38,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $message=[
-            'required' => "Kolom :attribute harus lengkap",
-            'date' => "Kolom :attribute harus tanggal",
-            'numeric' => "Kolom :attribute harus angka"
-        ];
-        $validasi = $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'level' => 'required',
-        ],$message);
-        $validasi['user_id'] = Auth::id();
-        User::create($validasi);
-
-        return redirect('user')->with('success', 'Data berhasil tersimpan');
+        
     }
 
     /**
@@ -74,9 +60,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::find($id);
-        $title = "Edit User";
-        return view('admin.userinput', compact('title', 'user'));
+        
     }
 
     /**
@@ -88,20 +72,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $message=[
-            'required' => "Kolom :attribute harus lengkap",
-            'date' => "Kolom :attribute harus tanggal",
-            'numeric' => "Kolom :attribute harus angka"
-        ];
-        $validasi = $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'level' => 'required',
-        ],$message);       
-        $validasi['user_id'] = Auth::id();        
-        User::where('id', $id)->update($validasi);
-
-        return redirect('user')->with('succes', 'Data berhasil terupdate');
+        
     }
 
     /**

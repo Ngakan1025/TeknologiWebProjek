@@ -25,8 +25,6 @@
                             <form action="{{route('user.destroy', $item->id)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <a href="{{route('user.edit', $item->id)}}"
-                                    class="btn btn-xs p-2 rounded bg-blue-200 m-3 hover:bg-blue-400 hover:to-blue-900">Edit</a>
                                 <button type="submit"
                                     class="btn btn-xs p-2 rounded bg-red-200 m-3 hover:bg-red-400 hover:to-red-900">Hapus</button>
                             </form>

@@ -17,8 +17,8 @@ class PinjamController extends Controller
     {
         $pinjam = Pinjam::with('buku')->latest()->paginate();
         // $pinjam = Pinjam::all();
-        $title = "Daftar Buku";
-        return view('admin.pinjam', compact('title', 'pinjam'));
+        $judul = "Daftar Buku";
+        return view('admin.pinjam', compact('judul', 'pinjam'));
     }
 
     /**

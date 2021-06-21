@@ -95,8 +95,7 @@ class KategoriController extends Controller
         $validasi = $request->validate([
             'kategori' => 'required'
         ],$message);       
-        $kategori = Kategori::find($id);
-        $validasi['user_id'] = Auth::id();        
+        $kategori = Kategori::find($id);       
         Kategori::where('id', $id)->update($validasi);
 
         return redirect('kategori')->with('succes', 'Data berhasil terupdate');

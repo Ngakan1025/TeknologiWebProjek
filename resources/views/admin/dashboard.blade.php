@@ -8,7 +8,7 @@
                     <div class="col-10">
                         <h1 class="mb-2">BUKU</h1>
                         <div class="bg-light-blue-300">
-                            <img class="object-cover h-60 w-100" style="margin-left: 10px;" src="download1.jpg">
+                            <img class="object-cover h-80 w-120" style="margin-left: 10px;" src="buku.jpg">
                         </div>
                         <p class="mt-3 text-justify">
                             Buku adalah kumpulan/himpunan kertas atau bahan lainnya yang dijilid menjadi satu pada salah
